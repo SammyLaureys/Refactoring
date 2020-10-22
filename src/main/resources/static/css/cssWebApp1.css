@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto Light";
+    width: 100%;
+    background-color: #EDE4B8;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #EDE4B8;
+}
+
+nav{
+    background-color: #E6D16E;
+}
+
+div.layoutVideoPage{
+    background: url("/img/backgroundVideo.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.layoutGamePage{
+    background: url("/img/backgroundVideo.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.info{
+    background-color: #E6D16E;
+    padding: 2.4rem;
+    font-size: 12px;
+}
+
+.bubbleText {
+    float: right;
+    border-color: #E6D16E;
+    background: #E6D16E;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    border-radius: 15px;
+    font-size: 24px;
+}
+
+.img-fluid {
+    margin-top: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.nameVideosAndGames {
+    background-color: rgb(245, 236, 199);
+}
+
+.row1 {
+    background-color: rgb(234, 214, 128);
+}
+
+.row2 {
+    background-color: rgba(106, 151, 186,1);
+}
+
+.row3 {
+    background-color: rgb(245, 236, 199);
+}
+
+.m-links {
+    margin-left: 27%;
+}
+
+iframe {
+    max-width: 70%;
+}
+
+.btn {
+    color: black;
+    border-color: #E6D16E;
+    background: #E6D16E;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 24px;
+}
+
+.HoofdTitel {
+    color: #DCCA70;
+    font-family: Roboto;
+    padding-top: 3%;
+}
+
+.speech-bubble {
+    color: black;
+    position: relative;
+    background: #E6D16E;
+    border-radius: .4em;
+    font-size: large;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: #E6D16E;
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
+}
+
+.speech-bubble-KangoeroeMol {
+    position: relative;
+    background: #E6D16E;
+    border-radius: .4em;
+    font-size: large;
+    width: 130px;
+}
+
+.speech-bubble-KangoeroeMol:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: #E6D16E;
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.animalNameTitleVideoGamePage{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.animalTitleVideoGamePage{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.footer1 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #efefef;
+    text-align: center;
+}
+
+.gegevens {
+    display: block;
+}
+
+.navH{
+    margin-top: -30px;
+}
+
+.adminNavH{
+    padding-top: 3%;
+    min-width: 16%;
+    padding-top: 5%;
+}
+
+.navP{
+    padding-top: 4%;
+}
+
+.visitorName{
+    margin-left: 70%;
+    color: black !important;
+}
+
+.txtW{
+    color: white;
+}
+
+.shopR{
+    color: #E6D16E;
+    margin-left: 70%;
+    padding-top: 3%;
+}
+
+.footer {
+    background-color: rgba(106, 151, 186,1);
+    padding: 20px;
+    color: #efc700;
+    font-family: "Trebuchet MS";
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.img-fluid2 {
+     margin-top: 0;
+}
+
+.Wi{
+    margin-right: 17%;
+}
+.visitorAdmin{
+    margin-left: -6%;
+    color: black !important;
+    margin-top: -1%
+}

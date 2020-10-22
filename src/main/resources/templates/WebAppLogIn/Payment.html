@@ -1,0 +1,59 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>InlogPagina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" href="../../static/css/cssWebApp1.css">
+    <link rel="stylesheet" th:href="@{/css/cssWebApp1.css}" href="../../static/css/cssWebApp1.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script type="text/javascript" th:src="@{/js/jquery-3.2.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/popper.min.js}"></script>
+</head>
+<body>
+<script
+        src="https://www.paypal.com/sdk/js?client-id=Ac6Aym-2xCNBSjhydgillrYEH8dHB7sYbXYRy0aBkIA3CuGybY7-YQlBQC7MgdPkkiTermLxMS6I8wvT&currency=EUR"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.
+</script>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark navH">
+    <a class="navbar-brand" href="/">
+        <img class="img-fluid" src="/img/logo_Transparant.png" alt="logo"/>
+    </a>
+    <h1 class="HoofdTitel">Betaling</h1>
+</nav>
+<div class="container">
+    <div class="card-footer">
+        <div id="paymentButtons" class="text-right">
+            <script>
+                paypal.Buttons({
+                    createOrder: function (data, actions) {
+                        // This function sets up the details of the transaction, including the amount and line item details.
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: '10'
+                                    // klanten hebben gezegd dat ze al hun knuffels 10 euro gaan laten kosten, daarom vind ik het nogal onnodig om een variabele in javascript te zetten
+                                }
+                            }]
+                        });
+                    },
+                    onApprove: function (data, actions) {
+                        // This function captures the funds from the transaction.
+                        return actions.order.capture().then(function (details) {
+                            // This function shows a transaction success message to your buyer.
+                            alert('Transaction completed by ' + details.payer.name.given_name);
+                        });
+                    }
+                }).render('#paymentButtons');
+            </script>
+        </div>
+    </div>
+</div>
+<div class="row bg-dark justify-content-center fixed-bottom">
+    <div class="col-md-4 text-center">
+        <h6 class="pt-2 text-white">© Copyright 2020 Knùs</h6>
+    </div>
+</div>
+</body>
+</html>

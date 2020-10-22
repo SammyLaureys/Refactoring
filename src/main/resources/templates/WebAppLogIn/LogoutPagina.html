@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>LogoutPage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" href="../../static/css/bootstrap.css">
+    <link rel="stylesheet" th:href="@{/css/cssWebApp1.css}" href="../../static/css/cssWebApp1.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script type="text/javascript" th:src="@{/js/jquery-3.2.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/popper.min.js}"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">
+        <img class="img-fluid" src="/img/logo_Transparant.png" alt="logo"/>
+    </a>
+    <h1 class="HoofdTitel">Uitloggen</h1>
+</nav>
+<div class="container-fluid">
+    <div class="row1content text-center">
+        <form th:action="@{/user/logout}" method="post">
+            <h2 class="mt-4">Ben je zeker?</h2>
+            <input class="btn mt-4" type="submit" value="Uitloggen"/>
+            <a href="javascript:history.back()" class="btn mt-4">Annuleren</a>
+        </form>
+    </div>
+    <div class="container-fluid fixed-bottom">
+        <div class="row bg-dark justify-content-center">
+            <div class="col-md-4 text-center">
+                <h6 class="whiteText text-white mt-3 mb-3">© Copyright 2020 Knùs</h6>
+            </div>
+        </div>
+    </div> <!--footer-->
+</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${appName}">app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" href="../../static/css/bootstrap.css">
+    <link rel="stylesheet" th:href="@{/css/cssWebshop1.css}" href="../../static/css/cssWebshop1.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script type="text/javascript" th:src="@{/js/jquery-3.2.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/popper.min.js}"></script>
+</head>
+<body>
+<div class="jumbotron-fluid">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">
+            <img class="img-fluid" src="/img/logo_Transparant.png" alt="logo"/>
+        </a>
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse"
+                data-target="#navbarKnus"
+                aria-controls="navbarKnus" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarKnus">
+            <ul class="nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/"><h6 class="whiteText">Home</h6></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about"><h6 class="whiteText">About</h6></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact"><h6 class="whiteText">Contact</h6></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/login"><h6 class="whiteText">Login</h6></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div> <!--navbar-->
+<div class="container-fluid">
+    <div class="row pt-5 pb-5">
+        <div class="col text-center">
+            <h2>Concept</h2><br>
+            <p>De Supervrienden zijn knuffels die tot leven komen in een app.<br>
+                Al spelenderwijs overwinnen ze samen angsten waar kinderen mee zitten.<br>
+                Dit doen ze aan de hand van spelletjes, filmpjes, chatfuncties, ...<br><br>
+                Leer de verschillende Supervriendjes in het animatiefilmpje kennen en ontdek welke Supervriend bij welke
+                angst helpt.</p>
+        </div>
+    </div>
+</div> <!--concept-->
+<div class="container-fluid deck-bg">
+    <div class="row pt-5 pb-5">
+        <div class="col text-center">
+            <h2>App</h2><br>
+            <p>De Supervriendjes komen tot leven in de Knús app die je hieronder kan ontdekken.</p><br>
+        </div>
+    </div>
+</div> <!--app-->
+<div class="container-fluid">
+    <div class="row pt-5 pb-5">
+        <div class="col-md-5 text-center">
+            <img class="img-fluid" src="/img/app-voorbeeld.PNG" alt="app-foto"/>
+        </div>
+        <div class="col-md-7 pl-5 pr-5">
+            <div class="row mt-5">
+                <h5>Binnen ons concept werken we met 2 modellen.<br>
+                    Je kan kiezen uit:</h5>
+            </div>
+            <div class="row mt-5">
+                <h5 class="extraWi">Model 1 : Full Package ( Knuffel + App )</h5>
+                <p class="mt-3">Bij dit com.example.demo.model krijg je bij het kopen van de knuffel automatisch<br>
+                    toegang tot álle functies van de app.</p>
+            </div>
+            <div class="row mt-5">
+                <h5>Model 2 : Enkel App</h5>
+                <p class="mt-3">Bij dit com.example.demo.model kies je ervoor om énkel gebruik te maken van de app. Het
+                    is de betalende versie waarin je toegang krijgt tot alle<br> functies, filmpjes en spelletjes die de
+                    app te bieden heeft.</p>
+            </div>
+        </div>
+    </div>
+</div> <!--modellen-->
+<div class="container-fluid blue-bg">
+    <div class="row pt-5">
+        <div class="col text-center whiteText">
+            <h2>Over ons</h2><br>
+            <h4>Achter knùs staat een jong en dynamisch team.</h4>
+            <p class="mt-4">Wij zijn vier studenten Media en Entertainment Business die vol<br>
+                ondernemingszin de start-up Knús hebben opgericht.<br>
+                Met onze verschillende kwaliteiten en inzichten zijn we gekomen tot waar we nu al staan.</p>
+        </div>
+    </div>
+    <div class="row pb-5">
+        <div class="col-md-3 col-sm-6 text-center">
+            <img class="img-fluid" src="/img/francoise.PNG" alt="Francoise"/>
+        </div>
+        <div class="col-md-3 col-sm-6 text-center">
+            <img class="img-fluid" src="/img/Liesel.PNG" alt="Liesel"/>
+        </div>
+        <div class="col-md-3 col-sm-6 text-center">
+            <img class="img-fluid" src="/img/Marlies.PNG" alt="Marlies"/>
+        </div>
+        <div class="col-md-3 col-sm-6 text-center">
+            <img class="img-fluid" src="/img/Stien.PNG" alt="Stien"/>
+        </div>
+    </div>
+</div> <!--over ons-->
+<div class="container-fluid fixed-bottom">
+    <div class="row bg-dark justify-content-center">
+        <div class="col-md-4 text-center">
+            <h6 class="whiteText mt-3 mb-3">© Copyright 2020 Knùs</h6>
+        </div>
+    </div>
+</div> <!--footer-->
+</body>
+</html>

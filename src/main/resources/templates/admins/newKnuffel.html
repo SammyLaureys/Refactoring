@@ -1,0 +1,104 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${appName}">app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" href="../../static/css/bootstrap.css">
+    <link rel="stylesheet" th:href="@{/css/cssWebshop1.css}" href="../../static/css/cssWebshop1.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script type="text/javascript" th:src="@{/js/jquery-3.2.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/popper.min.js}"></script>
+</head>
+<body>
+<div class="jumbotron-fluid">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" th:href="|/admins/overzichtKnuffels|">
+            <img class="img-fluid" src="/img/logo_Transparant.png" alt="logo"/>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse"
+                data-target="#navbarKnus"
+                aria-controls="navbarKnus" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarKnus">
+            <ul class="nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/"><h6 class="whiteText">Home</h6></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about"><h6 class="whiteText">About</h6></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact"><h6 class="whiteText">Contact</h6></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/login"><h6 class="whiteText">Login</h6></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/shoppingcart"><h6 class="whiteText"><i class="fas fa-shopping-cart"></i>
+                    </h6></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div> <!--navbar-->
+<div class="container-fluid">
+    <div class="row1content">
+        <div>
+            <h2>Nieuwe knuffel toevoegen</h2>
+            <form th:action="|/admins/newKnuffel|" method="post">
+                <div class="NewKnuffel">
+                    <div class="infoLine">
+                        <div class="infoLineName"><label for="NameKnuffel">Naam knuffel: </label></div>
+                        <div class="infoLineValue">
+                            <input id="NameKnuffel" name="NameKnuffel"/>
+                        </div>
+                    </div>
+                    <div class="infoLine">
+                        <div class="infoLineName"><label for="PriceKnuffel">Prijs knuffel: </label></div>
+                        <div class="infoLineValue">
+                            <input id="PriceKnuffel" name="PriceKnuffel"/>
+                        </div>
+                    </div>
+                    <div class="infoLine">
+                        <div class="infoLineName"><label for="PicKnuffel">naam bestand foto: </label></div>
+                        <div class="infoLineValue">
+                            <input id="PicKnuffel" name="PicKnuffel"/>
+                        </div>
+                    </div>
+                    <div class="infoLine">
+                        <div class="infoLineName"><label for="KnuffelDescription">extra info bij knuffel: </label></div>
+                        <div class="infoLineValue">
+                            <input id="KnuffelDescription" name="KnuffelDescription"/>
+                        </div>
+                    </div>
+                    <p>zo moet je de image ingeven (voorbeeld) : /img/knuffel_egel.png</p>
+                    <p>DUS /img/ + naam van foto </p>
+                    <div class="buton">
+                        <input class="buttonLook editButton" type="submit" value="Voeg knuffel toe"/>
+                        <a th:href="|/admins/newKnuffel|" class="buttonLook editButton">cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row bg-dark justify-content-center fixed-bottom">
+        <div class="col-md-4 text-center">
+            <h6 class="pt-2 text-white">© Copyright 2020 Knùs</h6>
+        </div>
+    </div>
+</div>
+<!-- ******************* -->
+<!-- Scripts -->
+<!-- ******************* -->
+<script src="/static/js/jquery-3.2.1.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+
+</body>
+</html>

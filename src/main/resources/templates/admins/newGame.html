@@ -1,0 +1,72 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Nieuw game toevoegen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" href="../../static/css/cssWebApp1.css">
+    <link rel="stylesheet" th:href="@{/css/cssWebApp1.css}" href="../../static/css/cssWebApp1.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script type="text/javascript" th:src="@{/js/jquery-3.2.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/popper.min.js}"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" th:href="|/admins/overviewGame|">
+        <img class="img-fluid" src="/img/logo_Transparant.png" alt="logo"/>
+    </a>
+    <h1 class="HoofdTitel">Nieuw video</h1>
+<!--    <a class="nav-item nav-link" th:href="'/GamePage/'+${knuffelId}" href="/GamePage.html"><h6 class="whiteText">Terug</h6></a>-->
+</nav>
+<div class="container-fluid">
+    <div class="row1content">
+        <div>
+            <h2>Nieuwe game toevoegen</h2>
+            <form th:action="|/admins/newGame|" method="post">
+
+                <div class="titleNewVideo">
+                    <div class="infoLine">
+                        <div class="infoLineName"><label for="titleGame">Titel game:</label></div>
+                        <div class="infoLineValue">
+                            <input id="titleGame" name="gameTitle"/>
+                        </div>
+                    </div>
+                    <div class="infoLine">
+                        <div class="infoLineName"><label for="pictureGame">source game:</label></div>
+                        <div class="infoLineValue">
+                            <input id="pictureGame" name="gamePicture"/>
+                        </div>
+                    </div>
+                    <div class="infoLine">
+                        <div class="infoLineName"><label for="idKnuffelgame">ID van de knuffel:</label></div>
+                        <div class="infoLineValue">
+                            <input id="idKnuffelgame" name="knuffelIDgame"/>
+                        </div>
+                    </div>
+                    <div class="buton">
+                        <input class="buttonLook editButton" type="submit" value="Voeg game toe"/>
+                        <a th:href="|/admins/overviewGame|" class="buttonLook editButton">cancel</a>
+                    </div>
+                    <h6>zo moet je de image ingeven (voorbeeld) : /img/game3.jpg</h6>
+                    <h6>DUS /img/ + naam van foto </h6>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row bg-dark justify-content-center fixed-bottom">
+        <div class="col-md-4 text-center">
+            <h6 class="pt-2 text-white">© Copyright 2020 Knùs</h6>
+        </div>
+    </div>
+</div>
+<!-- ******************* -->
+<!-- Scripts -->
+<!-- ******************* -->
+<script src="/static/js/jquery-3.2.1.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+
+</body>
+</html>

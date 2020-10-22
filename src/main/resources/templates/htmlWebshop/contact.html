@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${appName}">app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" href="../../static/css/bootstrap.css">
+    <link rel="stylesheet" th:href="@{/css/cssWebshop1.css}" href="../../static/css/cssWebshop1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" th:src="@{/js/jquery-3.2.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/popper.min.js}"></script>
+</head>
+<body>
+<div class="jumbotron-fluid">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">
+            <img class="img-fluid" src="/img/logo_Transparant.png" alt="logo"/>
+        </a>
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse"
+                data-target="#navbarKnus"
+                aria-controls="navbarKnus" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarKnus">
+            <ul class="nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/"><h6 class="whiteText">Home</h6></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about"><h6 class="whiteText">About</h6></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact"><h6 class="whiteText">Contact</h6></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/login"><h6 class="whiteText">Login</h6></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div> <!--navbar-->
+<div class="container-fluid">
+    <div class="row text-center justify-content-center pt-5">
+        <div class="col-12">
+            <form>
+                <div class="form-group row">
+                    <label for="email" class="col-3 text-right">
+                        E-mail:
+                    </label>
+
+                    <div class="col-6">
+                        <input type="email" id="email" class="form-control" placeholder="E-mailadres">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="bericht" class="col-3 text-right">
+                        Uw bericht:
+                    </label>
+                    <div class="col-6">
+                        <input type="text" id="bericht" class="form-control" placeholder="Bericht">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-9 offset-3">
+                        <button class="btn btn-primary">Verzenden</button>
+                    </div>
+                </div>
+            </form>
+            <a href="https://www.facebook.com/cwthe100/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/cwthe100?lang=en" class="fa fa-twitter mb-5"></a>
+        </div>
+    </div>
+</div> <!--contact-->
+<div class="container-fluid blue-bg pb-5">
+    <div class="row justify-content-center pb-5 pt-5">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47613.02169826462!2d-72.71934933571055!3d41.767670980573605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e6535d5af72f3f%3A0xab0feba87158d3b0!2sWcct!5e0!3m2!1sen!2sbe!4v1585323435250!5m2!1sen!2sbe"
+                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+    </div>
+</div><!--google maps-->
+<div class="container-fluid fixed-bottom">
+    <div class="row bg-dark justify-content-center">
+        <div class="col-md-4 text-center">
+            <h6 class="whiteText mt-3 mb-3">© Copyright 2020 Knùs</h6>
+        </div>
+    </div>
+</div> <!--footer-->
+</body>
+</html>

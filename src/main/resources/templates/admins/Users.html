@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" href="../../static/css/cssWebApp1.css">
+    <link rel="stylesheet" th:href="@{/css/cssWebApp1.css}" href="../../static/css/cssWebApp1.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script type="text/javascript" th:src="@{/js/jquery-3.2.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/popper.min.js}"></script>
+</head>
+<body>
+<div class="jumbotron-fluid">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="/user/appHome">
+            <img class="rounded" src="/img/logo_Transparant1.png" height="100" width="100"/>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse"
+                data-target="#navbarKnus"
+                aria-controls="navbarKnus" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarKnus">
+            <ul class="nav ml-auto">
+            </ul>
+        </div>
+    </nav>
+</div> <!--navbar-->
+<div class="container-fluid">
+    <div class="row gegevens">
+        <div th:each="User:${users}">
+            <h3 th:text="${User.getUsername()}"></h3>
+            <h3 th:text="${User.getAdress()}"></h3>
+            <h3 th:text="${User.getEmail()}"></h3>
+            <h3 th:text="${User.getRole()}"></h3>
+            <h3 th:text="${User.getPostcode()}"></h3>
+            <h3 th:text="${User.getStadGemeente()}"></h3>
+            <h3 th:text="${User.knuffel.getAnimalName()}"></h3>
+            <p>
+                <a class="btn btn-layout m-2" th:href="@{|/admins/addUser/${User.username}|}">Code toevoegen</a>
+            </p>
+            <br>
+            <hr>
+            <br>
+        </div>
+    </div>
+</div>
+</body>
+</html>
